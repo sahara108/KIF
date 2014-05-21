@@ -1034,6 +1034,198 @@
 			};
 			name = Release;
 		};
+		AB3E44EA192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_GENERATE_TEST_COVERAGE_FILES = YES;
+				GCC_INSTRUMENT_PROGRAM_FLOW_ARCS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "Classes/KIF-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_VERSION = "";
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1.1;
+				PUBLIC_HEADERS_FOLDER_PATH = "include/$(PRODUCT_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = "Coverage Test";
+		};
+		AB3E44EB192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/KIF.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PREFIX_HEADER = "Classes/KIF-XCTestPrefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"KIF_XCTEST=1",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = KIF;
+			};
+			name = "Coverage Test";
+		};
+		AB3E44EC192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DSTROOT = /tmp/KIF.dst;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SDKROOT)/Developer/Library/Frameworks\"";
+				GCC_PREFIX_HEADER = "Classes/KIF-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					DEBUG,
+					"KIF_SENTEST=1",
+				);
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "KIF-OCUnit";
+			};
+			name = "Coverage Test";
+		};
+		AB3E44ED192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = "Coverage Test";
+		};
+		AB3E44EE192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Test Host/Test Host-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "Test Host/Test Host-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Coverage Test";
+		};
+		AB3E44EF192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test Host.app/Test Host";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KIF Tests/KIF XCTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"KIF_XCTEST=1",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "KIF Tests/KIF Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "KIF Tests - XCTest";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = "Coverage Test";
+		};
+		AB3E44F0192CB5D40027680A /* Coverage Test */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Test Host.app/Test Host";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SDKROOT)/Developer/Library/Frameworks\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KIF Tests/KIF Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+					"KIF_SENTEST=1",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				INFOPLIST_FILE = "KIF Tests/KIF Tests-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = "Coverage Test";
+		};
 		EABD46A71857A0C700A5F081 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1486,6 +1678,7 @@
 			buildConfigurations = (
 				A889300B1685088F00FC7C63 /* Debug */,
 				EBAE490117A5B1380005EE19 /* Coverage */,
+				AB3E44ED192CB5D40027680A /* Coverage Test */,
 				A889300C1685088F00FC7C63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1496,6 +1689,7 @@
 			buildConfigurations = (
 				AAB07270139719AC008AF393 /* Debug */,
 				EBAE48FF17A5B1380005EE19 /* Coverage */,
+				AB3E44EA192CB5D40027680A /* Coverage Test */,
 				AAB07271139719AC008AF393 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1506,6 +1700,7 @@
 			buildConfigurations = (
 				EABD46A71857A0C700A5F081 /* Debug */,
 				EABD46A81857A0C700A5F081 /* Coverage */,
+				AB3E44EB192CB5D40027680A /* Coverage Test */,
 				EABD46A91857A0C700A5F081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1516,6 +1711,7 @@
 			buildConfigurations = (
 				EABD46CA1857A0F300A5F081 /* Debug */,
 				EABD46CB1857A0F300A5F081 /* Coverage */,
+				AB3E44EF192CB5D40027680A /* Coverage Test */,
 				EABD46CC1857A0F300A5F081 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1526,6 +1722,7 @@
 			buildConfigurations = (
 				EB60ECD9177F8C84005A041A /* Debug */,
 				EBAE490217A5B1380005EE19 /* Coverage */,
+				AB3E44EE192CB5D40027680A /* Coverage Test */,
 				EB60ECDA177F8C84005A041A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1536,6 +1733,7 @@
 			buildConfigurations = (
 				EB60ECFA177F8DB3005A041A /* Debug */,
 				EBAE490317A5B1380005EE19 /* Coverage */,
+				AB3E44F0192CB5D40027680A /* Coverage Test */,
 				EB60ECFB177F8DB3005A041A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
@@ -1546,6 +1744,7 @@
 			buildConfigurations = (
 				EB72047A1680DDAD00278DA2 /* Debug */,
 				EBAE490017A5B1380005EE19 /* Coverage */,
+				AB3E44EC192CB5D40027680A /* Coverage Test */,
 				EB72047B1680DDAD00278DA2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
