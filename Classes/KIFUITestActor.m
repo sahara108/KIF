@@ -326,7 +326,9 @@
     [self tapAccessibilityElement:element inView:view];
     [self waitForKeyboard];
     [self enterTextIntoCurrentFirstResponder:text fallbackView:view];
-    [self expectView:view toContainText:expectedResult ?: text];
+    if (expectedResult) {
+        [self expectView:view toContainText:expectedResult ?: text];
+    }
 }
 
 - (void)expectView:(UIView *)view toContainText:(NSString *)expectedResult
