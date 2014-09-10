@@ -635,7 +635,7 @@
 			name = "KIF Tests";
 			productName = "KIF Tests";
 			productReference = EABD46CD1857A0F300A5F081 /* KIF Tests - XCTest.xctest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		EB60ECC0177F8C83005A041A /* Test Host */ = {
 			isa = PBXNativeTarget;
@@ -671,7 +671,7 @@
 			name = "KIF Tests-OCUnit";
 			productName = "KIF Tests";
 			productReference = EB60ECEB177F8DB3005A041A /* KIF Tests-OCUnit.octest */;
-			productType = "com.apple.product-type.bundle";
+			productType = "com.apple.product-type.bundle.ocunit-test";
 		};
 		EB72043E1680DDAD00278DA2 /* KIF-OCUnit */ = {
 			isa = PBXNativeTarget;
@@ -696,7 +696,7 @@
 		AAB0725F139719AC008AF393 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastTestingUpgradeCheck = 0510;
+				LastTestingUpgradeCheck = 0600;
 				LastUpgradeCheck = 0510;
 			};
 			buildConfigurationList = AAB07262139719AC008AF393 /* Build configuration list for PBXProject "KIF" */;
