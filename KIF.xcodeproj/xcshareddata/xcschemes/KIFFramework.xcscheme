@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0600"
+   LastUpgradeVersion = "0700"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -9,14 +9,14 @@
          <BuildActionEntry
             buildForTesting = "YES"
             buildForRunning = "YES"
-            buildForProfiling = "YES"
+            buildForProfiling = "NO"
             buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
+            buildForAnalyzing = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB72043E1680DDAD00278DA2"
-               BuildableName = "libKIF-OCUnit.a"
-               BlueprintName = "KIF-OCUnit"
+               BlueprintIdentifier = "9CC9673A1AD4B1B600576D13"
+               BuildableName = "KIF.framework"
+               BlueprintName = "KIFFramework"
                ReferencedContainer = "container:KIF.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,19 +26,20 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES"
-      buildConfiguration = "Coverage">
+      buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "EB60ECEA177F8DB3005A041A"
-               BuildableName = "KIF Tests-OCUnit.octest"
-               BlueprintName = "KIF Tests-OCUnit"
-               ReferencedContainer = "container:KIF.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "9CC9673A1AD4B1B600576D13"
+            BuildableName = "KIF.framework"
+            BlueprintName = "KIFFramework"
+            ReferencedContainer = "container:KIF.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
+      <AdditionalOptions>
+      </AdditionalOptions>
    </TestAction>
    <LaunchAction
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
@@ -48,13 +49,14 @@
       buildConfiguration = "Debug"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "EB72043E1680DDAD00278DA2"
-            BuildableName = "libKIF-OCUnit.a"
-            BlueprintName = "KIF-OCUnit"
+            BlueprintIdentifier = "9CC9673A1AD4B1B600576D13"
+            BuildableName = "KIF.framework"
+            BlueprintName = "KIFFramework"
             ReferencedContainer = "container:KIF.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

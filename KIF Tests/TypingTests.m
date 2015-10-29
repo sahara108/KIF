@@ -7,6 +7,7 @@
 //
 
 #import <KIF/KIF.h>
+#import "KIFTestStepValidation.h"
 
 @interface TypingTests : KIFTestCase
 @end
@@ -23,11 +24,15 @@
     [tester tapViewWithAccessibilityLabel:@"Test Suite" traits:UIAccessibilityTraitButton];
 }
 
-
 - (void)testWaitingForFirstResponder
 {
     [tester tapViewWithAccessibilityLabel:@"Greeting" value:@"Hello" traits:UIAccessibilityTraitNone];
     [tester waitForFirstResponderWithAccessibilityLabel:@"Greeting"];
+}
+
+- (void)testMissingFirstResponder
+{
+    KIFExpectFailure([[tester usingTimeout:1] waitForFirstResponderWithAccessibilityLabel:@"Greeting"]);
 }
 
 - (void)testEnteringTextIntoFirstResponder
@@ -38,11 +43,16 @@
     [tester waitForViewWithAccessibilityLabel:@"Greeting" value:@"Yo" traits:UIAccessibilityTraitNone];
 }
 
+- (void)testFailingToEnterTextIntoFirstResponder
+{
+    KIFExpectFailure([[tester usingTimeout:1] enterTextIntoCurrentFirstResponder:@"Yo"]);
+}
+
 - (void)testEnteringTextIntoViewWithAccessibilityLabel
 {
     [tester longPressViewWithAccessibilityLabel:@"Greeting" value:@"Hello" duration:2];
     [tester tapViewWithAccessibilityLabel:@"Select All"];
-    [tester tapViewWithAccessibilityLabel:@"Delete"];
+    [tester tapViewWithAccessibilityLabel:@"Cut"];
     [tester enterText:@"Yo" intoViewWithAccessibilityLabel:@"Greeting"];
     [tester waitForViewWithAccessibilityLabel:@"Greeting" value:@"Yo" traits:UIAccessibilityTraitNone];
 }
@@ -65,10 +75,31 @@
     [tester enterText:@", world\n" intoViewWithAccessibilityLabel:@"Greeting" traits:UIAccessibilityTraitNone expectedResult:@"Hello, world"];
 }
 
+- (void)testEnteringEmojiCharactersIntoViewWithAccessibilityLabel
+{
+	NSString *text = @" 😓He😤ll👿o";
+	[tester clearTextFromAndThenEnterText:text intoViewWithAccessibilityLabel:@"Greeting"];
+	UITextField * tf = (UITextField*)[tester waitForViewWithAccessibilityLabel:@"Greeting"];
+	XCTAssertTrue([tf.text isEqualToString:text]);
+}
+
 - (void)testClearingALongTextField
 {
     [tester clearTextFromAndThenEnterText:@"A man, a plan, a canal, Panama.  Able was I, ere I saw Elba." intoViewWithAccessibilityLabel:@"Greeting"];
     [tester clearTextFromViewWithAccessibilityLabel:@"Greeting"];
+}
+
+- (void)testThatClearingTextHitsTheDelegate
+{
+    [tester enterText:@"hello" intoViewWithAccessibilityLabel:@"Other Text"];
+    [tester clearTextFromViewWithAccessibilityLabel:@"Other Text"];
+    [tester waitForViewWithAccessibilityLabel:@"Greeting" value:@"Deleted something." traits:UIAccessibilityTraitNone];
+}
+
+- (void)testThatBackspaceDeletesOneCharacter
+{
+    [tester enterText:@"hi\bello" intoViewWithAccessibilityLabel:@"Other Text" traits:UIAccessibilityTraitNone expectedResult:@"hello"];
+    [tester waitForViewWithAccessibilityLabel:@"Greeting" value:@"Deleted something." traits:UIAccessibilityTraitNone];
 }
 
 @end
